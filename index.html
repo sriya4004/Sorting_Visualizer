@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorting Algorithm Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Sorting Algorithm Visualizer</h1>
+
+    <div class="input-section">
+      <input type="text" id="inputArray" placeholder="numbers separated by commas" />
+      <button onclick="startSorting()">Start Algorithm</button>
+      <button onclick="generateRandomArray()">Generate Random Array</button>
+    </div>
+
+    <div class="controls">
+      <label for="algorithm-select">Choose Algorithm: </label>
+      <select id="algorithm-select">
+        <option value="bubble">Bubble Sort</option>
+        <option value="selection">Selection Sort</option>
+        <option value="insertion">Insertion Sort</option>
+        <option value="quick">Quick Sort</option>
+        <option value="merge">Merge Sort</option>
+        <option value="heap">Heap Sort</option>
+        <option value="radix">Radix Sort</option>
+      </select>
+    </div>
+
+    <div class="speed-section">
+      <label for="speed-range">Speed: </label>
+      <input type="range" id="speed-range" min="10" max="500" value="100" />
+      <span id="speed-value">100ms</span>
+    </div>
+
+    <div>
+      <button onclick="resetArray()">Reset Array</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
